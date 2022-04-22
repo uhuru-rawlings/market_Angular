@@ -1,0 +1,28 @@
+<div class="navsection">
+    <div class="container">
+       <app-navbar></app-navbar>
+    </div>
+</div>
+<div class="container">
+    <div class="searchitems">
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="searchitem">search item by price,category,description</label>
+                <input type="search" name="searchitem" id="searchitem" class="shadow-none form-control" placeholder="Enter item name,category...">
+            </div>
+        </form>
+    </div>
+    <div class="products">
+        <div class="card" *ngFor="let product of products; let i = index">
+            <div class="productimage">
+                <img src="{{ product.image }}" height="100%" width="100%" alt="">
+            </div>
+            <div class="card-body">
+                <div class="titles">{{ product.title }}</div>
+                <div class="titles">{{ product.rating.rate }}</div>
+                <div class="price">$ {{ product.price }}</div>
+            </div>
+            <button class="btn text-light shadow-none" id="addcart">Add to Cart</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+.flex_category{
+    display: flex;
+}
+.navsection{
+    box-shadow: 3px 4px 4px -2px gainsboro;
+}
+.flex_category .categories{
+    border: 1px solid #CED4DA;
+}
+.categories .header{
+    border-bottom: 1px solid #CED4DA;
+    font-weight: bold;
+    text-align: center;
+    padding: 7px;
+}
+.categories .buttons{
+    margin: 7px;
+}
+.categories .buttons .btn{
+    border: 1px solid #CED4DA !important;
+    width: 100%;
+    margin-bottom: 5px;
+}

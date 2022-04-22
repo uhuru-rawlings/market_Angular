@@ -1,0 +1,20 @@
+<div class="navsection">
+    <div class="container">
+       <app-navbar></app-navbar>
+    </div>
+</div>
+<div class="container">
+    <div class="flex_category">
+        <div class="categories">
+            <div class="header">Categories</div>
+            <div class="contents">
+                <div class="buttons" *ngFor="let category of categories">
+                    <button class="btn ">{{ category}}</button>
+                </div>
+            </div>
+        </div>
+        <div class="itemsection">
+            Items
+        </div>
+    </div>
+</div>
