@@ -11,4 +11,8 @@ export class CategoryService {
   getcategories():Observable<any>{
     return this.http.get(this.url)
   }
+  getitems(category:any):Observable<any>{
+  let categ =`https://fakestoreapi.com/products/category/${ category }`
+    return this.http.get(categ)
+  }
 }

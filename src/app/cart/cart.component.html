@@ -3,6 +3,38 @@
        <app-navbar></app-navbar>
     </div>
 </div>
-<div class="container">
-    
+<div class="container" id="topsections">
+    <div class="cartitems">
+        <h4>Cart</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Item</th>
+                    <!-- <th>Quantity</th> -->
+                    <th>Price</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of items; let i = index">
+                    <td>{{ i + 1 }}</td>
+                    <td>{{ item.title }}</td>
+                    <!-- <td>
+                        <div class="form-group">
+                            <input type="number" (input)="increment(item)" [(ngModel)]="totalquanity" name="itemquantity" id="itemquantity" min="1" class="form-control shadow-none">
+                       </div>
+                    </td> -->
+                    <td>${{ item.price }}</td>
+                    <td>
+                        <div class="form-group">
+                            <input type="submit" (click)="deletecart(item)" value="Delete" class="btn bg-danger text-light shadow-none">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="totalprice">Total = $ {{ totlaprice }}</div>
+        <div class="checkoutbutton"> <button (click)="checkout()" class="btn bg-success text-light shadow-none">CheckOut</button> </div>
+    </div>
 </div>

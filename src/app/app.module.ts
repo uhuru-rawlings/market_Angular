@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http'
 import { ProductsService } from './products.service';
 import { CategoryService } from './services/category.service';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,8 @@ import { CategoryService } from './services/category.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [ProductsService,CategoryService],
   bootstrap: [AppComponent]

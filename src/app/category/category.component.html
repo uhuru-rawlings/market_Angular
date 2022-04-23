@@ -3,18 +3,30 @@
        <app-navbar></app-navbar>
     </div>
 </div>
-<div class="container">
+<div class="container" id="topsections">
     <div class="flex_category">
         <div class="categories">
             <div class="header">Categories</div>
             <div class="contents">
-                <div class="buttons" *ngFor="let category of categories">
-                    <button class="btn ">{{ category}}</button>
+                <div class="buttons" *ngFor="let category of categories;let i = index">
+                    <button class="btn" (click)="getitems(i)">{{ category}}</button>
                 </div>
             </div>
         </div>
         <div class="itemsection">
-            Items
+            <div class="products">
+                <div class="card" *ngFor="let product of products; let i = index">
+                    <div class="productimage">
+                        <img src="{{ product.image }}" height="100%" width="100%" alt="">
+                    </div>
+                    <div class="card-body">
+                        <div class="titles">{{ product.title }}</div>
+                        <div class="titles">{{ product.rating.rate }}</div>
+                        <div class="price">$ {{ product.price }}</div>
+                    </div>
+                    <button class="btn text-light shadow-none" (click)="addcart(product)" id="addcart">Add to Cart</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>

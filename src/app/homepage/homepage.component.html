@@ -3,15 +3,15 @@
        <app-navbar></app-navbar>
     </div>
 </div>
-<div class="container">
-    <div class="searchitems">
+<div class="container" id="topsections">
+    <!-- <div class="searchitems">
         <form action="" method="post">
             <div class="form-group">
                 <label for="searchitem">search item by price,category,description</label>
                 <input type="search" name="searchitem" id="searchitem" class="shadow-none form-control" placeholder="Enter item name,category...">
             </div>
         </form>
-    </div>
+    </div> -->
     <div class="products">
         <div class="card" *ngFor="let product of products; let i = index">
             <div class="productimage">
@@ -22,7 +22,7 @@
                 <div class="titles">{{ product.rating.rate }}</div>
                 <div class="price">$ {{ product.price }}</div>
             </div>
-            <button class="btn text-light shadow-none" id="addcart">Add to Cart</button>
+            <button class="btn text-light shadow-none" (click)="addcart(product)" id="addcart">Add to Cart</button>
         </div>
     </div>
 </div>
